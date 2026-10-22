@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humanity’s Largest Group Project</title>
+  <meta name="description" content="Science is humanity’s largest group project. Ask a question or share something you’ve noticed, and see the science already underway at Google.">
+  <meta name="theme-color" content="#2132a8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Humanity’s Largest Group Project">
+  <meta property="og:description" content="Ask a question or share something you’ve noticed, and see the science already underway at Google.">
+  <!-- Relative for the prototype; use the full URL once the site has a home. -->
+  <meta property="og:image" content="assets/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Humanity’s Largest Group Project: a box to ask a question, on a field of ultramarine grains.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="fonts/lmroman17-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lmroman12-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lmroman12-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/google-sans-discover.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#entry">Skip to the question box</a>
+
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+  <div class="field-labels" id="field-labels" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="https://gemini.google.com/app" target="_blank" rel="noopener">Discover with Gemini<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#how" data-nav="how">How it works</a></li>
+        <li><a href="#stories" data-nav="stories">Stories</a></li>
+        <li><a href="#work" data-nav="work">Google’s work</a></li>
+        <li><a href="#index" data-nav="index">Index</a></li>
+      </ul>
+    </nav>
+    <a class="nav-ask" id="nav-ask" href="#entry">Ask<span class="nav-ask-more"> a question</span></a>
+    <button class="nav-menu" id="nav-menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  </header>
+
+  <main>
+    <!-- 1. What this is, and the one thing to do -->
+    <section class="hero" id="top" data-scene="hero">
+      <h1 class="title reads">Humanity’s Largest Group Project</h1>
+      <p class="hero-lede reads">Ask a question or share something you’ve noticed. We’ll show you the science already underway at Google, and how you can join in.</p>
+
+      <form class="entry" id="entry-form" novalidate>
+        <div class="slip">
+          <div class="slip-input">
+            <label for="entry" class="visually-hidden">Your question or observation</label>
+            <span class="caret" aria-hidden="true"></span>
+            <textarea id="entry" name="entry" rows="1" maxlength="400" autocomplete="off" enterkeyhint="send"
+              placeholder="Ask a question or share an observation"></textarea>
+            <button class="btn" type="submit">Add to the project</button>
+          </div>
+          <div class="result" role="region" aria-label="Where your entry fits" tabindex="-1">
+            <div class="result-inner"></div>
+          </div>
+        </div>
+        <p class="form-status" role="alert"></p>
+        <p class="examples"></p>
+      </form>
+
+      <a class="hero-next" href="#how">See how it works</a>
+    </section>
+
+    <!-- 2. How it works -->
+    <section class="how" id="how" data-scene="flow" aria-labelledby="how-h">
+      <h2 class="how-h reads" id="how-h">How it works</h2>
+      <ol class="how-steps">
+        <li class="reads">
+          <h3>Ask or share</h3>
+          <p>Type a question, or something you’ve noticed: fewer fireflies, an earlier spring, a strange sound at the beach.</p>
+        </li>
+        <li class="reads">
+          <h3>It’s filed in the index</h3>
+          <p>Your words are matched to everyday topics, like the index at the back of a book, and your entry is added there.</p>
+        </li>
+        <li class="reads">
+          <h3>See the work underway</h3>
+          <p>You see real Google projects on that topic, in plain words, and ways to dig in with Gemini.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. Why: the client’s manifesto, one idea per screen -->
+    <section class="chapter" id="why" aria-label="Why it matters">
+      <div class="step" data-scene="clusters">
+        <div class="reads">
+          <h2 class="step-h">Big problems need big-time help.</h2>
+          <p class="step-p">Big labs, big countries, big institutions and big research departments, sure.</p>
+        </div>
+      </div>
+      <div class="step" data-scene="fraction">
+        <div class="reads">
+          <p class="step-big">But they’re only a fraction of the help we need.</p>
+        </div>
+      </div>
+      <div class="step" data-scene="tower">
+        <div class="reads">
+          <h2 class="step-h">Science is humanity’s largest group project.</h2>
+          <p class="step-p">It’s built on everything the world knows, at a scale that affects us all. Yet the day-to-day work of science is still gated in ivory towers.</p>
+        </div>
+      </div>
+      <div class="step" data-scene="ring">
+        <div class="reads">
+          <p class="step-big">So we put what the world knows into Gemini, so more of the world can get involved.</p>
+          <p class="step-p">Now everyone has the same Gemini tools the biggest labs use, to track down ideas or offer their own observations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Stories: the people “et al.” hides -->
+    <section class="chapter" id="stories" aria-labelledby="stories-h">
+      <div class="step step--low" data-scene="etal">
+        <div class="reads">
+          <h2 class="step-h" id="stories-h">Sometimes the answers come from the places you least expect.</h2>
+          <p class="step-p">Science papers name a few people, then fold everyone else into two words: <i>et al.</i>, “and others.” Here are some of the others.</p>
+        </div>
+      </div>
+      <div id="story-steps"></div>
+      <div class="step step--low" data-scene="you">
+        <div class="reads">
+          <p class="step-big">…and you.</p>
+          <p class="step-p">Every one of them started by noticing something. <a href="#ask" data-ask>What have you noticed?</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Google’s work -->
+    <section class="chapter" id="work" aria-labelledby="work-h">
+      <div class="chapter-head">
+        <div class="reads">
+          <h2 class="step-h" id="work-h">Already underway at Google</h2>
+          <p class="step-p">Real projects you can explore today, in plain words. Some of them you can join.</p>
+        </div>
+      </div>
+      <div id="work-steps"></div>
+      <p class="work-more"><a class="reads" href="#index">See every project in the index</a></p>
+    </section>
+
+    <!-- 6. Your turn -->
+    <section class="ask" id="ask" data-scene="gather" aria-labelledby="ask-h">
+      <h2 class="step-h reads" id="ask-h">Your turn</h2>
+      <p class="step-p reads">Ask a question or share something you’ve noticed. It’s filed in the index, and you’ll see the work it connects to.</p>
+      <div class="ask-slot" id="ask-slot"></div>
+    </section>
+
+    <!-- 7. Index -->
+    <section class="index" id="index" data-scene="dust" aria-labelledby="index-h">
+      <div class="index-head reads">
+        <h2 class="index-h" id="index-h">Index</h2>
+        <p class="index-lede">Everyday words, and the work already underway at Google. What you add is filed here too.</p>
+        <nav class="ix-letters" id="ix-letters" aria-label="Jump to a letter"></nav>
+      </div>
+      <div class="index-body reads" id="index-body"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>A concept for Google I/O. Anything you add stays in this browser.</p>
+      <p><button class="link-button" id="forget" type="button">Remove what I’ve added</button></p>
+      <p class="form-status" id="forget-status" role="status"></p>
+    </div>
+  </footer>
+
+  <p class="visually-hidden" id="announce" role="status" aria-live="polite"></p>
+  <noscript><p class="noscript">Turn on JavaScript to add to the project.</p></noscript>
+
+  <script src="js/data.js?v=5"></script>
+  <script src="js/world.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
+  <script src="js/field.js?v=5"></script>
+</body>
+</html>

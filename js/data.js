@@ -1,0 +1,181 @@
+/* Content for Humanity’s Largest Group Project.
+   authors  – the byline, in order of the year their answer arrived
+   projects – real Google work, described plainly
+   index    – everyday words that point to projects (also drives matching) */
+window.HLGP = {
+  // Fact-checked 22 Oct 2026 against Wikipedia (several languages), Crossref and primary pages.
+  // Individuals in the order their answer arrived, then the crowd, then you.
+  authors: [
+    { name: 'Antonie van Leeuwenhoek', lat: 52.01, lon: 4.36, place: 'A draper’s shop in Delft', year: 1674, found: 'saw single-celled life for the first time, through lenses he made himself.', source: 'https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek' },
+    { name: 'Benjamin Jesty', lat: 50.89, lon: -2.58, place: 'A farm in Yetminster, Dorset', year: 1774, found: 'protected his wife and sons from smallpox with cowpox, 22 years before Jenner.', source: 'https://en.wikipedia.org/wiki/Benjamin_Jesty' },
+    { name: 'Mary Anning', town: 'Lyme Regis, England', lat: 50.72, lon: -2.94, story: true, place: 'The cliffs at Lyme Regis', year: 1823, found: 'dug the first complete plesiosaur skeleton out of crumbling sea cliffs.', source: 'https://en.wikipedia.org/wiki/Mary_Anning' },
+    { name: 'Eunice Newton Foote', lat: 42.91, lon: -76.8, place: 'A home lab in upstate New York', year: 1856, found: 'showed that air with more carbon dioxide heats up most in sunlight.', source: 'https://en.wikipedia.org/wiki/Eunice_Newton_Foote' },
+    { name: 'Gregor Mendel', lat: 49.19, lon: 16.61, place: 'A monastery garden in Brno', year: 1865, found: 'bred thousands of pea plants and found that traits pass on in predictable ratios.', source: 'https://en.wikipedia.org/wiki/Gregor_Mendel' },
+    { name: 'Henrietta Swan Leavitt', lat: 42.38, lon: -71.12, place: 'An hourly job measuring stars at Harvard', year: 1912, found: 'found that brighter pulsing stars pulse more slowly: a yardstick for the universe.', source: 'https://en.wikipedia.org/wiki/Henrietta_Swan_Leavitt' },
+    { name: 'Srinivasa Ramanujan', town: 'Madras, now Chennai, India', lat: 13.08, lon: 80.27, story: true, native: 'சீனிவாச இராமானுசன்', lang: 'ta', place: 'A clerk’s desk at the Madras Port Trust', year: 1913, found: 'mailed Cambridge nine pages of startling formulas he had worked out alone.', source: 'https://en.wikipedia.org/wiki/Srinivasa_Ramanujan' },
+    { name: 'Marjorie Courtenay-Latimer', lat: -33.02, lon: 27.91, place: 'A small museum in East London, South Africa', year: 1938, found: 'spotted a strange fish in a trawler’s catch. It was a coelacanth, thought long extinct.', source: 'https://en.wikipedia.org/wiki/Marjorie_Courtenay-Latimer' },
+    { name: 'Erasto Mpemba', town: 'Tanganyika, now Tanzania', lat: -4.79, lon: 38.3, story: true, place: 'A cookery class in Tanganyika', year: 1963, found: 'noticed his warm ice-cream mix froze before his classmates’ cooled ones.', source: 'https://en.wikipedia.org/wiki/Mpemba_effect' },
+    { name: 'Kaoru Ikeya', lat: 34.72, lon: 137.6, native: '池谷薫', lang: 'ja', place: 'A piano factory near Lake Hamana', year: 1963, found: 'discovered a new comet with a telescope he built himself.', source: 'https://en.wikipedia.org/wiki/Kaoru_Ikeya' },
+    { name: 'Jocelyn Bell Burnell', lat: 52.21, lon: 0.12, place: 'A PhD student’s chart paper in Cambridge', year: 1967, found: 'noticed “a bit of scruff” in her data. It was the first known pulsar.', source: 'https://en.wikipedia.org/wiki/Jocelyn_Bell_Burnell' },
+    { name: 'Robert Evans', lat: -33.72, lon: 150.45, place: 'A minister’s back porch in the Blue Mountains', year: 1981, found: ', a church minister, spotted 42 exploding stars by eye, a record.', source: 'https://en.wikipedia.org/wiki/Robert_Evans_(astronomer)' },
+    { name: 'Kamoya Kimeu', lat: 4.0, lon: 35.8, place: 'A riverbank west of Lake Turkana', year: 1984, found: 'spotted a tiny skull fragment that led to the “Turkana Boy” skeleton.', source: 'https://humanorigins.si.edu/evidence/human-fossils/fossils/knm-wt-15000' },
+    { name: 'William Kamkwamba', lat: -13.03, lon: 33.48, place: 'A village library in Malawi', year: 2002, found: 'built a power-generating windmill from scrap, guided by a photo in a library book.', source: 'https://www.movingwindmills.org/' },
+    { name: 'Hanny van Arkel', town: 'Heerlen, the Netherlands', lat: 50.89, lon: 5.98, story: true, place: 'A primary-school teacher in Heerlen', year: 2007, found: 'asked about “the blue stuff” near a galaxy. It was a vast, glowing gas cloud.', source: 'https://en.wikipedia.org/wiki/Hanny%27s_Voorwerp' },
+    { name: 'Víctor Buso', town: 'Rosario, Argentina', lat: -32.95, lon: -60.65, story: true, place: 'A locksmith’s rooftop in Rosario', year: 2016, found: 'was testing a new camera when he caught the first light of an exploding star.', source: 'https://doi.org/10.1038/nature25151' },
+    { name: 'Kōichi Itagaki', town: 'Yamagata, Japan', lat: 38.25, lon: 140.34, story: true, native: '板垣公一', lang: 'ja', place: 'A peanut company in Yamagata', year: 2023, found: 'spotted a new exploding star in the nearby Pinwheel Galaxy.', source: 'https://en.wikipedia.org/wiki/K%C5%8Dichi_Itagaki' },
+    { name: 'Foldit players', place: 'A protein-folding video game', year: 2011, found: 'worked out the shape of a virus enzyme that had stumped scientists for 15 years. Nature lists them as authors.', source: 'https://doi.org/10.1038/nature09304' },
+  ],
+
+  // Real Google work, described plainly. Checked 22 Oct 2026 (names, status and URLs).
+  // `home` is the index term where a project is described; elsewhere it is only named.
+  projects: {
+    // Life and health
+    alphafold: { name: 'AlphaFold Protein Structure Database', home: 'Proteins', what: 'Free 3D shapes for more than 200 million proteins, helping scientists study disease and design medicines.', join: 'Anyone can search it, and AlphaFold Server runs your own predictions for free.', url: 'https://alphafold.ebi.ac.uk/' },
+    alphagenome: { name: 'AlphaGenome', what: 'Predicts how changes in DNA disrupt the way genes switch on and off.', join: 'Its atlas of every possible single-letter change is free for academic research.', url: 'https://deepmind.google/science/alphagenome/' },
+    cosci: { name: 'Co-Scientist', home: 'Research ideas', what: 'A team of Gemini agents that proposes, debates and refines new hypotheses with scientists.', join: 'Researchers can ask for access through Google Labs.', url: 'https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/' },
+    geminiscience: { name: 'Gemini for Science', home: 'Research ideas', what: 'Google’s research tools built on Gemini, gathered in one place for scientists.', join: 'Scientists can apply for access.', url: 'https://ai.google/gemini-for-science' },
+    c2s: { name: 'Cell2Sentence-Scale', what: 'An open Gemma model that suggested a way to make some tumors visible to the immune system. Lab tests on cells backed it up.', url: 'https://blog.google/innovation-and-ai/products/google-gemma-ai-cancer-therapy-discovery/' },
+    medgemma: { name: 'MedGemma', what: 'Free, open medical AI models for text, X-rays, and skin and eye images, which developers build health tools on.', url: 'https://developers.google.com/health-ai-developer-foundations' },
+    hear: { name: 'HeAR', what: 'AI trained on millions of short clips of coughs and breathing, for building lung-health screening tools.', url: 'https://developers.google.com/health-ai-developer-foundations/hear' },
+    flu: { name: 'Flu forecasting', what: 'Google’s AI flu forecasts ranked first of 39 teams in the CDC’s 2025–26 forecasting challenge.', url: 'https://blog.google/innovation-and-ai/models-and-research/google-research/google-science-ai-flu-forecasts/' },
+    euphonia: { name: 'Project Euphonia', what: 'Helps speech recognition understand people with atypical speech, such as people living with ALS.', join: 'Some US adults can contribute recordings through the Speech Accessibility Project.', url: 'https://sites.research.google/euphonia/about/' },
+    brain: { name: 'Neural mapping', what: 'Maps every connection between brain cells, from a whole fruit-fly brain to a fragment of human brain.', join: 'Anyone can explore the fly brain in FlyWire Codex.', url: 'https://sites.research.google/gr/neural-mapping/' },
+    honeybees: { name: 'Healthier honeybees', what: 'Scientists used AlphaFold to see how tiny protein changes affect honeybee health, to help breed stronger colonies.', url: 'https://deepmind.google/blog/breeding-healthier-and-stronger-honeybees/' },
+
+    // Weather, climate and hazards
+    weathernext: { name: 'WeatherNext 3', what: 'Google’s AI weather model, refreshed every hour from satellite data, behind the forecasts in Search, Maps and Gemini.', join: 'It’s there whenever you look up the weather.', url: 'https://deepmind.google/science/weathernext/' },
+    cyclones: { name: 'Cyclone forecasting', what: 'An AI model that forecasts a cyclone’s path and strength, giving people about a day of extra warning.', join: 'The models are open source.', url: 'https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/' },
+    floodhub: { name: 'Flood Hub', what: 'A free map that forecasts river floods up to seven days ahead, in more than 150 countries.', join: 'Check the map, or get flood alerts in Search, Maps and Android.', url: 'https://sites.research.google/floods/' },
+    firesat: { name: 'FireSat', what: 'A fleet of satellites designed to spot wildfires as small as a classroom, before they spread.', url: 'https://sites.research.google/gr/wildfires/firesat/' },
+    wildfiremaps: { name: 'Wildfire boundary tracking', what: 'AI traces the edges of large wildfires from satellite images and shows them in Search and Maps.', join: 'Search for a wildfire near you to see it.', url: 'https://sites.research.google/gr/wildfires/boundary-tracking/' },
+    quakes: { name: 'Android Earthquake Alerts', what: 'Android phones work together as a giant earthquake detector and warn people seconds before the shaking arrives.', join: 'Now in more than 200 countries and regions. Turn it on in your phone’s safety settings.', url: 'https://blog.google/products-and-platforms/platforms/android/android-earthquake-alerts-expansion-2026/' },
+    contrails: { name: 'Project Contrails', what: 'AI forecasts help pilots avoid making contrails, the trails behind planes that warm the planet.', url: 'https://sites.research.google/gr/contrails/' },
+    greenlight: { name: 'Green Light', what: 'AI suggests better traffic-light timing to cities, cutting stop-and-go driving and pollution.', join: 'Already running in more than 100 cities.', url: 'https://sites.research.google/gr/greenlight/' },
+    neuralgcm: { name: 'NeuralGCM', what: 'An open climate model that mixes physics and AI to simulate the atmosphere, including long-range rainfall.', url: 'https://github.com/neuralgcm/neuralgcm' },
+    methane: { name: 'Methane mapping', what: 'AI that spots and measures methane leaks around the world from NASA data gathered in space.', url: 'https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/' },
+    heat: { name: 'Heat Resilience', what: 'Roof-by-roof data for more than 50 cities, to help plan cool roofs against extreme heat.', join: 'Anyone can explore the map.', url: 'https://sites.research.google/gr/heat-resilience/' },
+    eie: { name: 'Environmental Insights Explorer', what: 'Free city data on emissions, rooftop solar, tree cover and air quality, for local climate planning.', url: 'https://insights.sustainability.google/' },
+    air: { name: 'Air quality in Google Maps', what: 'Air-quality maps, health tips and hourly forecasts for more than 100 countries, plus pollen.', join: 'Turn on the air quality layer in Google Maps.', url: 'https://developers.google.com/maps/documentation/air-quality' },
+    solar: { name: 'Project Sunroof', what: 'Estimates how much sun your roof gets and what solar panels could save.', join: 'Enter your address to see yours. Coverage varies by country.', url: 'https://sunroof.withgoogle.com/' },
+    fusion: { name: 'Fusion energy research', what: 'AI and an open-source plasma simulator help steer a new fusion machine toward net energy, with Commonwealth Fusion Systems.', url: 'https://deepmind.google/blog/bringing-ai-to-the-next-generation-of-fusion-energy/' },
+
+    // Earth and nature
+    earthai: { name: 'Google Earth AI', what: 'Planet-scale AI models and data. You can ask questions about places in plain language in Google Earth.', join: 'Try Ask Google Earth on the web.', url: 'https://ai.google/earth-ai/' },
+    alphaearth: { name: 'AlphaEarth Foundations', what: 'An AI summary of every 10-meter patch of land, year by year, that makes maps of crops and forests faster.', url: 'https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/' },
+    forty: { name: 'Forest Typology', what: 'A new global map that tells natural forests apart from plantations and tree farms.', url: 'https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/' },
+    earthengine: { name: 'Google Earth Engine', what: 'Decades of satellite images for tracking changes to land, water, forests and cities.', join: 'Free for research, and anyone can watch Timelapse in Google Earth.', url: 'https://earthengine.google.com/' },
+    openbuildings: { name: 'Open Buildings', what: 'An open map of 1.8 billion building outlines across Africa, Asia and Latin America.', url: 'https://sites.research.google/gr/open-buildings/' },
+    water: { name: 'Global Surface Water Explorer', what: 'Shows where lakes and rivers grew, shrank or disappeared over four decades of satellite images.', join: 'Built with the EU’s Joint Research Centre. Anyone can explore it.', url: 'https://global-surface-water.appspot.com/' },
+    gfw: { name: 'Global Fishing Watch', what: 'A free public map that tracks fishing boats worldwide to expose illegal fishing. Google helped found it.', join: 'Anyone can open the map.', url: 'https://globalfishingwatch.org/' },
+    speciesnet: { name: 'SpeciesNet', what: 'Open-source AI that identifies nearly 2,500 kinds of animals in camera-trap photos.', join: 'Anyone with a trail camera can upload photos to Wildlife Insights.', url: 'https://www.wildlifeinsights.org/' },
+    perch: { name: 'Perch', what: 'An open AI model that recognizes birds and other animals by their calls, to help track endangered species.', url: 'https://deepmind.google/blog/how-ai-is-helping-advance-the-science-of-bioacoustics-to-save-endangered-species/' },
+    corals: { name: 'Calling in Our Corals', what: 'Recordings from reefs around the world that help scientists check on reef health.', join: 'Anyone can listen and click the fish sounds they hear. It takes about three minutes.', url: 'https://artsandculture.google.com/experiment/zgFx1tMqeIZyTw' },
+    whales: { name: 'Pattern Radio: Whale Songs', what: 'Hours of humpback whale song you can explore, laid out with machine learning.', join: 'Listen online.', url: 'https://patternradio.withgoogle.com/' },
+    dolphingemma: { name: 'DolphinGemma', what: 'An AI model trained on wild dolphin sounds, helping scientists find patterns in how dolphins communicate.', url: 'https://deepmind.google/models/gemma/dolphingemma/' },
+    planets: { name: 'Planet hunting with AI', what: 'Google AI found a hidden eighth planet circling the star Kepler-90 in NASA telescope data.', join: 'The code is open for anyone to try.', url: 'https://blog.google/innovation-and-ai/products/hunting-planets-machine-learning/' },
+
+    // Physics, materials and math
+    quantum: { name: 'Google Quantum AI', what: 'Building error-corrected quantum computers on the Willow chip, for problems ordinary computers can’t solve.', url: 'https://quantumai.google/' },
+    gnome: { name: 'GNoME', what: 'AI that predicted 380,000 stable new crystals, candidates for better batteries, chips and solar panels.', join: 'The data is free on GitHub.', url: 'https://deepmind.google/blog/millions-of-new-materials-discovered-with-deep-learning/' },
+    deepthink: { name: 'Gemini Deep Think', what: 'Math-reasoning AI that reached gold-medal level at the International Mathematical Olympiad and now helps with research problems.', join: 'Available in the Gemini app, depending on your plan.', url: 'https://deepmind.google/models/gemini/deep-think/' },
+    alphaevolve: { name: 'AlphaEvolve', what: 'A Gemini-powered coding agent that finds better algorithms for math, power grids and computing.', join: 'Researchers can express interest through Google Labs.', url: 'https://deepmind.google/blog/alphaevolve-impact/' },
+
+    // Tools anyone can use
+    notebook: { name: 'Gemini Notebook', what: 'Upload your sources and get summaries, audio overviews and quizzes grounded in them, with citations. It used to be called NotebookLM.', join: 'Free with a Google account.', url: 'https://notebook.google/' },
+    deepresearch: { name: 'Gemini Deep Research', what: 'A Gemini agent that reads up to hundreds of websites and writes you a cited report in minutes.', join: 'In the Gemini app.', url: 'https://gemini.google/overview/deep-research/' },
+    scholar: { name: 'Google Scholar', what: 'A free search engine for scientific papers and the papers that cite them.', url: 'https://scholar.google.com/' },
+    datacommons: { name: 'Data Commons', what: 'Free public statistics on climate, health, population and the economy, linked in one place.', url: 'https://datacommons.org/' },
+    colab: { name: 'Google Colab', what: 'Free notebooks in your browser for running code and AI models.', url: 'https://colab.research.google.com/' },
+    kaggle: { name: 'Kaggle', what: 'Google’s community for datasets, models and data-science competitions that anyone can enter.', url: 'https://www.kaggle.com/' },
+    lens: { name: 'Google Lens', what: 'Point your camera at a plant, insect or animal to find out what it is.', url: 'https://search.google/ways-to-search/lens/' },
+    aiquests: { name: 'AI Quests', what: 'A free game for ages 11 to 14 that teaches AI through real Google research projects.', join: 'Play it in a browser, no code needed.', url: 'https://research.google/ai-quests/' },
+  },
+
+  // The “Google’s work” chapter: projects anyone can use or join, and the shape the grains form for each.
+  featured: [
+    { id: 'alphafold', shape: 'protein' },
+    { id: 'quakes', shape: 'quake' },
+    { id: 'floodhub', shape: 'flood' },
+    { id: 'corals', shape: 'sound' },
+    { id: 'cyclones', shape: 'cyclone' },
+    { id: 'gnome', shape: 'crystal' },
+  ],
+
+  // When nothing matches: the tools anyone can use to dig in.
+  fallback: ['deepresearch', 'notebook', 'scholar'],
+
+  // Everyday words. `keys` drive matching; `refs` list projects; `also` cross-references.
+  index: [
+    { term: 'Air', keys: ['air quality', 'pollution', 'polluted', 'smog', 'breathe', 'breathing', 'asthma', 'haze', 'pollen', 'allergy', 'allergies', 'hay fever', 'aqi'], refs: ['air'], also: ['Traffic', 'Wildfires'] },
+    { term: 'Algorithms', keys: ['algorithm', 'code', 'coding', 'software', 'programming', 'computer science', 'optimization', 'efficiency', 'power grid'], refs: ['alphaevolve', 'colab'], also: ['Mathematics'] },
+    { term: 'Animals', see: ['Wildlife'] },
+    { term: 'Batteries', see: ['Materials'] },
+    { term: 'Bees', keys: ['bee', 'bees', 'honeybee', 'honeybees', 'hive', 'beekeeping', 'pollinator', 'pollinators', 'pollination'], refs: ['honeybees', 'lens'], also: ['Insects'] },
+    { term: 'Birds', keys: ['bird', 'birdsong', 'songbird', 'bird call', 'dawn chorus', 'feeder', 'owl', 'sparrow', 'robin', 'migration', 'chirp', 'chirping', 'birdwatching'], refs: ['perch'], also: ['Wildlife'] },
+    { term: 'Brains', keys: ['brain', 'neuron', 'neurons', 'neuroscience', 'memory', 'alzheimer', 'alzheimers', 'dementia', 'nervous system'], refs: ['brain'], also: ['Health'] },
+    { term: 'Cancer', keys: ['tumor', 'tumour', 'tumors', 'chemotherapy', 'oncology', 'immunotherapy', 'leukemia'], refs: ['c2s', 'cosci'], also: ['Genes', 'Medicine'] },
+    { term: 'Climate', keys: ['climate change', 'global warming', 'warming', 'warmer', 'carbon', 'co2', 'emissions', 'greenhouse', 'methane', 'gas leak'], refs: ['neuralgcm', 'methane'], also: ['Contrails', 'Heat', 'Weather'] },
+    { term: 'Code', see: ['Algorithms'] },
+    { term: 'Contrails', keys: ['contrail', 'plane', 'airplane', 'flight', 'flying', 'airline', 'aviation', 'jet', 'white lines'], refs: ['contrails'], also: ['Climate'] },
+    { term: 'Coral reefs', keys: ['coral', 'reef', 'snorkel', 'snorkeling', 'scuba', 'diving', 'bleaching'], refs: ['corals', 'perch'], also: ['Oceans'] },
+    { term: 'Coughs', keys: ['cough', 'coughing', 'tuberculosis', 'tb', 'lung', 'lungs', 'wheeze', 'wheezing', 'respiratory'], refs: ['hear'], also: ['Flu', 'Health'] },
+    { term: 'Disasters', see: ['Earthquakes', 'Floods', 'Hurricanes', 'Wildfires'] },
+    { term: 'DNA', see: ['Genes'] },
+    { term: 'Dolphins', keys: ['dolphin', 'porpoise', 'animal communication', 'talk to animals', 'whistle', 'whistles'], refs: ['dolphingemma'], also: ['Oceans', 'Whales'] },
+    { term: 'Earthquakes', keys: ['earthquake', 'quake', 'tremor', 'seismic', 'shaking', 'aftershock', 'fault line'], refs: ['quakes'] },
+    { term: 'Energy', keys: ['electricity', 'power', 'power plant', 'energy bill', 'electric bill', 'clean energy', 'renewable', 'renewables'], refs: ['fusion', 'solar'], also: ['Materials'] },
+    { term: 'Fish', see: ['Oceans'] },
+    { term: 'Floods', keys: ['flood', 'flooding', 'river', 'monsoon', 'storm surge', 'overflow', 'riverbank', 'flash flood', 'water rising', 'dam', 'levee'], refs: ['floodhub'], also: ['Weather', 'Lakes'] },
+    { term: 'Flu', keys: ['flu', 'influenza', 'cold', 'colds', 'virus', 'outbreak', 'pandemic', 'fever'], refs: ['flu'], also: ['Coughs', 'Health'] },
+    { term: 'Forests', keys: ['forest', 'deforestation', 'logging', 'rainforest', 'woods', 'woodland', 'plantation', 'palm oil', 'land use', 'farmland', 'crop', 'crops'], refs: ['forty', 'alphaearth'], also: ['Trees'] },
+    { term: 'Fusion', keys: ['fusion', 'plasma', 'tokamak', 'nuclear'], refs: ['fusion'], also: ['Energy'] },
+    { term: 'Genes', keys: ['gene', 'genetic', 'genetics', 'dna', 'genome', 'mutation', 'inherited', 'hereditary', 'rare disease', 'variant', 'family illness', 'ancestry'], refs: ['alphagenome'], also: ['Cancer', 'Proteins'] },
+    { term: 'Health', keys: ['doctor', 'hospital', 'disease', 'illness', 'sick', 'symptom', 'symptoms', 'diagnosis', 'x-ray', 'scan', 'patient', 'clinic', 'skin', 'rash'], refs: ['medgemma'], also: ['Brains', 'Coughs', 'Flu', 'Medicine'] },
+    { term: 'Heat', keys: ['heat', 'heatwave', 'heat wave', 'hot', 'hotter', 'heat island', 'cool roof', 'cool roofs', 'air conditioning', 'sweltering'], refs: ['heat'], also: ['Climate', 'Trees'] },
+    { term: 'Homework', see: ['Learning'] },
+    { term: 'Hurricanes', keys: ['hurricane', 'cyclone', 'typhoon', 'tropical storm', 'storm path', 'landfall'], refs: ['cyclones'], also: ['Weather'] },
+    { term: 'Insects', keys: ['insect', 'bug', 'bugs', 'firefly', 'fireflies', 'lightning bug', 'butterfly', 'butterflies', 'moth', 'beetle', 'ant', 'ants', 'cricket', 'crickets', 'cicada', 'cicadas', 'mosquito', 'mosquitoes', 'spider', 'wasp', 'dragonfly'], refs: ['lens', 'perch'], also: ['Bees', 'Wildlife'] },
+    { term: 'Lakes', keys: ['lake', 'pond', 'reservoir', 'water level', 'drying up', 'dried up', 'wetland', 'wetlands', 'swim', 'swimming', 'freshwater', 'glacier'], refs: ['water', 'earthengine'], also: ['Floods'] },
+    { term: 'Learning', keys: ['homework', 'school', 'student', 'students', 'teacher', 'class', 'classroom', 'kid', 'kids', 'child', 'children', 'learn', 'learning', 'study', 'studying', 'quiz'], refs: ['notebook', 'aiquests'], also: ['Reading the research'], weight: -1 },
+    { term: 'Maps', keys: ['map', 'mapping', 'satellite', 'satellites', 'building', 'buildings', 'village', 'neighborhood', 'my area', 'google earth'], refs: ['earthai', 'openbuildings', 'earthengine'], also: ['Forests', 'Lakes'] },
+    { term: 'Materials', keys: ['material', 'crystal', 'crystals', 'battery', 'batteries', 'semiconductor', 'chip', 'chips', 'superconductor', 'solar cell', 'mineral'], refs: ['gnome'] },
+    { term: 'Mathematics', keys: ['math', 'maths', 'equation', 'proof', 'theorem', 'prime', 'primes', 'geometry', 'olympiad', 'puzzle', 'logic'], refs: ['deepthink', 'alphaevolve'], also: ['Algorithms'] },
+    { term: 'Medicine', keys: ['medicine', 'medicines', 'drug', 'drugs', 'cure', 'cures', 'treatment', 'antibiotic', 'antibiotics', 'superbug', 'vaccine', 'vaccines', 'pharmacy', 'malaria'], refs: ['alphafold', 'cosci'], also: ['Cancer', 'Proteins'] },
+    { term: 'Oceans', keys: ['ocean', 'sea', 'seas', 'beach', 'fish', 'fishing', 'overfishing', 'boat', 'boats', 'seafood', 'marine', 'tide', 'coast'], refs: ['gfw', 'corals'], also: ['Coral reefs', 'Dolphins', 'Whales'] },
+    { term: 'Planets', see: ['Space'] },
+    { term: 'Plants', keys: ['plant', 'flower', 'flowers', 'weed', 'weeds', 'leaf', 'garden', 'gardening', 'mushroom', 'mushrooms', 'tomato', 'tomatoes', 'seed', 'seeds'], refs: ['lens'], also: ['Forests', 'Trees'] },
+    { term: 'Proteins', keys: ['protein', 'enzyme', 'enzymes', 'molecule', 'molecules', 'molecular', 'biology', 'cell', 'cells', 'fold', 'folding'], refs: ['alphafold'], also: ['Genes', 'Medicine'] },
+    { term: 'Quantum computing', keys: ['quantum', 'qubit', 'qubits', 'quantum computer', 'supercomputer', 'encryption'], refs: ['quantum'] },
+    { term: 'Rain', see: ['Weather'] },
+    { term: 'Reading the research', keys: ['paper', 'papers', 'research', 'journal', 'article', 'articles', 'evidence', 'citation', 'look into', 'find out'], refs: ['deepresearch', 'scholar'], also: ['Learning'], weight: -1 },
+    { term: 'Research ideas', keys: ['hypothesis', 'hypotheses', 'experiment', 'experiments', 'scientist', 'scientists', 'lab', 'labs', 'discovery', 'discoveries', 'idea', 'ideas', 'theory'], refs: ['cosci', 'geminiscience'], weight: -1 },
+    { term: 'Rivers', see: ['Floods', 'Lakes'] },
+    { term: 'Satellites', see: ['Maps', 'Wildfires'] },
+    { term: 'School', see: ['Learning'] },
+    { term: 'Smoke', see: ['Air', 'Wildfires'] },
+    { term: 'Solar power', keys: ['solar', 'solar panel', 'solar panels', 'rooftop', 'roof', 'sunshine'], refs: ['solar'], also: ['Energy'] },
+    { term: 'Space', keys: ['space', 'planet', 'planets', 'exoplanet', 'star', 'stars', 'telescope', 'galaxy', 'astronomy', 'nasa', 'universe', 'night sky', 'sky at night', 'solar system'], refs: ['planets'] },
+    { term: 'Speech', keys: ['speech', 'speaking', 'voice', 'stutter', 'stuttering', 'als', 'parkinson', 'parkinsons', 'stroke', 'deaf', 'accessibility', 'disability'], refs: ['euphonia'] },
+    { term: 'Statistics', keys: ['statistics', 'data', 'dataset', 'datasets', 'numbers', 'census', 'population', 'graph', 'chart', 'competition'], refs: ['datacommons', 'kaggle'], weight: -1 },
+    { term: 'Storms', see: ['Hurricanes', 'Weather'] },
+    { term: 'Traffic', keys: ['traffic', 'traffic light', 'traffic lights', 'red light', 'red lights', 'commute', 'congestion', 'rush hour', 'car', 'cars', 'driving', 'intersection'], refs: ['greenlight'], also: ['Air'] },
+    { term: 'Trees', keys: ['tree', 'trees', 'shade', 'canopy', 'park', 'parks', 'street trees'], refs: ['eie'], also: ['Forests', 'Heat'] },
+    { term: 'Water', see: ['Floods', 'Lakes', 'Oceans'] },
+    { term: 'Weather', keys: ['weather', 'forecast', 'rain', 'rainy', 'raining', 'rainfall', 'drought', 'snow', 'snowfall', 'wind', 'cloud', 'clouds', 'thunderstorm', 'storm', 'frost', 'umbrella'], refs: ['weathernext'], also: ['Floods', 'Hurricanes'] },
+    { term: 'Whales', keys: ['whale', 'whales', 'whale song', 'humpback', 'marine mammal', 'ocean sounds'], refs: ['whales', 'perch'], also: ['Dolphins', 'Oceans'] },
+    { term: 'Wildfires', keys: ['wildfire', 'fire', 'fires', 'forest fire', 'bushfire', 'smoke', 'smoky', 'burning', 'ash', 'evacuation'], refs: ['firesat', 'wildfiremaps'], also: ['Air'] },
+    { term: 'Wildlife', keys: ['wildlife', 'animal', 'animals', 'deer', 'fox', 'foxes', 'bear', 'bears', 'bat', 'bats', 'frog', 'frogs', 'biodiversity', 'species', 'extinct', 'extinction', 'endangered', 'trail camera', 'camera trap'], refs: ['speciesnet', 'perch'], also: ['Birds', 'Insects'] },
+  ],
+
+  // Short labels on the page; the full sentence goes into the slip.
+  examples: [
+    { label: 'fewer birds at dawn', text: 'I hear fewer birds in the mornings than I used to.' },
+    { label: 'a river that floods earlier', text: 'Why does the river near us flood earlier every spring?' },
+    { label: 'finding new medicines', text: 'Can AI help find new medicines faster?' },
+  ],
+
+  gemini: {
+    prefills: false,
+    url: () => 'https://gemini.google.com/app',
+  },
+};
